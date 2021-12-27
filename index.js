@@ -1,10 +1,9 @@
 let operation = "";
 
 let result = 0;
-let ejecutar = true;
+let execute = true;
 
-while (ejecutar) {
-
+while (execute) {
   if (operation == "") {
     let operationInput = prompt("Digite la operacion");
     if (operationInput == "suma") {
@@ -16,16 +15,7 @@ while (ejecutar) {
     } else if (operationInput == "divicion") {
       operation = "divicion";
     }
-
-    let salir = prompt("Desea de salir")
-    if (salir.toLocaleLowerCase() == "si") {
-      alert("La " + operation + "es igual a :" + result);
-      ejecutar = false
-
-    }
-    
   }
-
 
   let num = prompt(operation + " - Digite el numero ");
 
@@ -41,5 +31,11 @@ while (ejecutar) {
   } else if (operation == "divicion") {
     result /= +num;
     operation = "";
+  }
+  alert("El resultado es :" + result);
+  let salir = prompt("Desea de salir");
+  if (salir.toLocaleLowerCase() == "si") {
+    alert("El resultado es :" + result);
+    execute = false;
   }
 }
