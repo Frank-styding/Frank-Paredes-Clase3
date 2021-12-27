@@ -3,7 +3,12 @@ let operation = "";
 let result = 0;
 let execute = true;
 
-while (execute) {
+while (
+  operation != "suma" ||
+  operation != "resta" ||
+  operation != "divicion" ||
+  operation != "multiplicacion"
+) {
   if (operation == "") {
     let operationInput = prompt("Digite la operacion");
     if (operationInput == "suma") {
@@ -33,9 +38,9 @@ while (execute) {
     operation = "";
   }
   alert("El resultado es :" + result);
-  let salir = prompt("Desea de salir");
-  if (salir.toLocaleLowerCase() == "si") {
+  let exit = prompt("Desea de salir");
+  if (exit.toLocaleLowerCase() == "si") {
     alert("El resultado es :" + result);
-    execute = false;
+    break;
   }
 }
