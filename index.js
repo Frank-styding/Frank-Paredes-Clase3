@@ -1,7 +1,31 @@
-let operation = "";
 
+
+function suma() {
+  let num = prompt("opracion :" + "suma" + "-" + "Digite el numero ");
+  result += +num;
+  alert("La " + operation + "es igual a :" + result);
+}
+
+function resta() {
+  let num = prompt("opracion :" + "resta" + "-" + "Digite el numero ");
+  result -= +num;
+  alert("La " + operation + "es igual a :" + result);
+}
+
+function multiplicacion() {
+  let num = prompt("opracion :" + "multiplicacion" + "-" + "Digite el numero ");
+  result *= +num;
+  alert("La " + operation + "es igual a :" + result);
+}
+
+function divicion() {
+  let num = prompt("opracion :" + "divicion" + "-" + "Digite el numero ");
+  result /= +num;
+  alert("La " + operation + "es igual a :" + result);
+}
+
+let operation = "";
 let result = 0;
-let execute = true;
 
 while (
   operation != "suma" ||
@@ -9,38 +33,25 @@ while (
   operation != "divicion" ||
   operation != "multiplicacion"
 ) {
-  if (operation == "") {
-    let operationInput = prompt("Digite la operacion");
-    if (operationInput == "suma") {
-      operation = "suma";
-    } else if (operationInput == "resta") {
-      operation = "resta";
-    } else if (operationInput == "multiplicacion") {
-      operation = "multiplicacion";
-    } else if (operationInput == "divicion") {
-      operation = "divicion";
-    }
+  let operationInput = prompt("Digite la operacion");
+
+  if (operationInput == "suma") {
+    suma()
+    operation = "suma";
+  } else if (operationInput == "resta") {
+    resta()
+    operation = "resta";
+  } else if (operationInput == "multiplicacion") {
+    multiplicacion()
+    operation = "multiplicacion";
+  } else if (operationInput == "divicion") {
+    divicion()
+    operation = "divicion";
   }
 
-  let num = prompt(operation + " - Digite el numero ");
-
-  if (operation == "suma") {
-    result += +num;
-    operation = "";
-  } else if (operation == "resta") {
-    result -= +num;
-    operation = "";
-  } else if (operation == "multiplicacion") {
-    result *= +num;
-    operation = "";
-  } else if (operation == "divicion") {
-    result /= +num;
-    operation = "";
-  }
-  alert("El resultado es :" + result);
-  let exit = prompt("Desea de salir");
-  if (exit.toLocaleLowerCase() == "si") {
-    alert("El resultado es :" + result);
+  let salir = prompt("Desea de salir");
+  if (salir.toLocaleLowerCase() == "si") {
+    alert("La " + operation + "es igual a :" + result);
     break;
   }
 }
