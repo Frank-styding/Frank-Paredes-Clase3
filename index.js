@@ -3,25 +3,25 @@
 function suma() {
   let num = prompt("opracion :" + "suma" + "-" + "Digite el numero ");
   result += +num;
-  alert("La " + operation + "es igual a :" + result);
+  alert("La suma es igual a :" + result);
 }
 
 function resta() {
   let num = prompt("opracion :" + "resta" + "-" + "Digite el numero ");
   result -= +num;
-  alert("La " + operation + "es igual a :" + result);
+  alert("La resta es igual a :" + result);
 }
 
 function multiplicacion() {
   let num = prompt("opracion :" + "multiplicacion" + "-" + "Digite el numero ");
   result *= +num;
-  alert("La " + operation + "es igual a :" + result);
+  alert("La mutiplicacion es igual a :" + result);
 }
 
 function divicion() {
   let num = prompt("opracion :" + "divicion" + "-" + "Digite el numero ");
   result /= +num;
-  alert("La " + operation + "es igual a :" + result);
+  alert("La divicion es igual a :" + result);
 }
 
 let operation = "";
